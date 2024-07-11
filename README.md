@@ -1,5 +1,20 @@
 [![PyPi](https://img.shields.io/pypi/v/overturemaps.svg)](https://pypi.python.org/pypi/overturemaps)
 
+# R&D Camptocamp
+## Init the project
+```shell
+python3.11 -m venv .venv
+poetry install
+source .venv/bin/activate
+```
+## Download datasets
+```shell
+overturemaps download --bbox=-5.144,47.2778,-1.0157,49.1133 -f geoparquet -o ./data/bretagne-division_area.parquet --type=division_area
+overturemaps download --bbox=-5.144,47.2778,-1.0157,49.1133 -f geoparquet -o ./data/bretagne-place.parquet --type=place
+```
+## Play with the data
+See [notebook](./c2c/duckdb.ipynb)
+
 # overturemaps-py
 
 Official Python command-line tool of the [Overture Maps Foundation](https://overturemaps.org)
